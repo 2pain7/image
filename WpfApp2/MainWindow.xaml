@@ -5,53 +5,53 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:WpfApp2"
         mc:Ignorable="d"
-        Title="MainWindow" Height="475.352" Width="743.863">
-    <Grid>
-        <StackPanel x:Name="control1" Margin="0,0,500,175">
-            <TextBlock x:Name="text1" TextWrapping="Wrap" Text="" Height="51" Margin="0,0,1,0"/>
-            <Image x:Name="img1"></Image>
-            <Grid>
-                <Button Height="36" Margin="0,0,113,0" >
+        Title="MainWindow" Height="529.352" Width="743.863">
+    <Grid Background="LightBlue">
+        <StackPanel x:Name="control1" Margin="0,0,551,266" Background="DarkBlue" >
+            <TextBlock x:Name="text1" TextWrapping="Wrap" Text="" Height="51" Margin="0,0,1,0" Foreground="LightGray"/>
+            <Grid Height="80">
+                <Button Height="36" Margin="0,22,94,22" Click="Button_Click1" >
                     <Image Source="/NewFolder1/6364354.png" />
                 </Button>
-                <Button Margin="120,2,0,1">
-                    <Image Source="/NewFolder1/36364354.png" Height="33" Width="114" />
+                <Button Margin="90,22,0,21" Click="Button_Click">
+                    <Image Source="/NewFolder1/36364354.png" Height="33" Width="78" />
                 </Button>
             </Grid>
-            <StackPanel.Effect>
-                <BlurEffect Radius="10" />
-            </StackPanel.Effect>
+            <Image x:Name="img1" RenderTransformOrigin="0.5,0.5" Height="82" Margin="0,0,5,0">
+                <Image.RenderTransform>
+                    <RotateTransform x:Name="ImageRotation"/>
+                </Image.RenderTransform>
+            </Image>
         </StackPanel>
-        <StackPanel x:Name="control2" Margin="369,4,131,171">
-            <TextBlock x:Name="text2" TextWrapping="Wrap" Text="" Height="51" Margin="0,0,1,0"/>
-            <Image x:Name="img2" Source="c:\users\student\desktop\pesh\upravl\wpfapp2\wpfapp2\newfolder1\images.jfif"></Image>
-            <Grid>
-                <Button Height="36" Margin="0,0,113,0" >
+        <StackPanel x:Name="control2" Margin="254,1,290,265" Background="DarkBlue" Height="260" Width="200">
+            <TextBlock x:Name="text2" TextWrapping="Wrap" Text="" Height="51" Margin="0,0,1,0" Foreground="LightGray" FontSize="8"/>
+            <Grid Height="69">
+                <Button Height="36" Margin="-3,16,94,17" Click="Button_Click_1" >
                     <Image Source="/NewFolder1/6364354.png" />
                 </Button>
-                <Button Margin="120,2,0,1">
-                    <Image Source="/NewFolder1/36364354.png" Height="33" Width="114" />
+                <Button Margin="97,16,0,16" Click="Button_Click_2">
+                    <Image Source="/NewFolder1/36364354.png" Height="33" Width="74" />
                 </Button>
             </Grid>
-            <StackPanel.Effect>
-                <BlurEffect Radius="10" />
-            </StackPanel.Effect>
+            <Image x:Name="img2" Source="c:\users\student\desktop\pesh\upravl\wpfapp2\wpfapp2\newfolder1\images.jfif" RenderTransformOrigin="0.5,0.5" Height="103" Margin="-1,0,0,0">
+                <Image.RenderTransform>
+                    <RotateTransform x:Name="ImageRotation1"/>
+                </Image.RenderTransform>
+            </Image>
         </StackPanel>
+        <local:UserControl1 Margin="474,-30,6,238"></local:UserControl1>
+        <local:UserControl1 Margin="-30,243,522,-23" Height="Auto"/>
+        <local:UserControl1 Margin="204,265,248,-1" Height="Auto"/>
+        <local:UserControl1 Margin="474,272,4,-6" Height="Auto"/>
+
     </Grid>
     <Window.Resources>
-        <Style TargetType="Button">
+        <Style TargetType="StackPanel">
             <Setter Property="Effect">
                 <Setter.Value>
                     <BlurEffect Radius="10" />
                 </Setter.Value>
             </Setter>
-            <Style.Triggers>
-                <Trigger Property="IsMouseOver" Value="True">
-                    <Setter Property="Effect" Value="{x:Null}" />
-                </Trigger>
-            </Style.Triggers>
-        </Style>
-        <Style TargetType="StackPanel">
             <Setter Property="RenderTransform">
                 <Setter.Value>
                     <ScaleTransform ScaleX="1" ScaleY="1"/>
@@ -61,7 +61,17 @@
                 <Trigger Property="IsMouseOver" Value="True">
                     <Setter Property="RenderTransform">
                         <Setter.Value>
-                            <ScaleTransform ScaleX="1.5" ScaleY="1.5"/>
+                            <ScaleTransform ScaleX="1.2" ScaleY="1.2"/>
+                        </Setter.Value>
+                    </Setter>
+                    <Setter Property="Effect">
+                        <Setter.Value>
+                            <BlurEffect Radius="0" />
+                        </Setter.Value>
+                    </Setter>
+                    <Setter Property="Effect">
+                        <Setter.Value>
+                            <DropShadowEffect />
                         </Setter.Value>
                     </Setter>
                 </Trigger>
@@ -69,4 +79,3 @@
         </Style>
     </Window.Resources>
 </Window>
-    

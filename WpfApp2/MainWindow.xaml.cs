@@ -26,7 +26,25 @@ namespace WpfApp2
             img1.Source = new BitmapImage(new Uri("http://img4-fotki.yandex.net/get/6614/39108201.e/0_STATIC89c24_345827ea_L"));
             text1.Text = "http://img4-fotki.yandex.net/get/6614/39108201.e/0_STATIC89c24_345827ea_L";
             text2.Text = "https://www.google.com/url?sa=i&url=https%3A%2F%2Fpxhere.com%2Fru%2Fphoto%2F796699&psig=AOvVaw31iLy3Elpylyqyb_04lcAX&ust=1730521716917000&source=images&cd=vfe&opi=89978449&ved=0CBQQjRxqFwoTCJDJ6vyluokDFQAAAAAdAAAAABAE";
+        }
 
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+            ImageRotation.Angle += 90;
+        }
+        private void Button_Click1(object sender, RoutedEventArgs e)
+        {
+            ImageRotation.Angle -= 90;
+        }
+
+        private void Button_Click_1(object sender, RoutedEventArgs e)
+        {
+            ImageRotation1.Angle -= 90;
+        }
+
+        private void Button_Click_2(object sender, RoutedEventArgs e)
+        {
+            ImageRotation1.Angle += 90;
         }
     }
 }
